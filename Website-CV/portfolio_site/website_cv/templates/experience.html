@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience | Ilias</title>
+
+  <style>
+    /* BODY */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: white;
+    }
+    /* NAVIGATION */
+    .nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background:blue;
+    padding: 12px 24px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+   .nav a {
+    margin: 0 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+    .experience-page {
+      min-height: 100vh;
+      padding: 60px 20px;
+      text-align: center;
+    }
+   /* Header */
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 40px;
+    }
+
+    /* TOP BOXES */
+    .experience-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .experience-box {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 30px;
+      border-radius: 16px;
+      width: 320px;
+      text-align: left;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .experience-box h2 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .placeholder {
+      opacity: 0.6;
+      font-style: italic;
+    }
+
+ 
+    .experience-section {
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    .tab.active {
+      background: #38bdf8;
+      color: black;
+    }
+
+    /* TAB CONTENT */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* EXPERIENCE CARDS */
+    .exp-card {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .exp-header h3 {
+      margin: 0;
+      color: #38bdf8;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* UNIVERSITY PAGES */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .module-list li {
+      margin-bottom: 6px;
+    }
+
+    .pagination {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .pagination button {
+      margin: 5px;
+      padding: 6px 12px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: #38bdf8;
+      color: black;
+    }
+
+    
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+}
+
+  </style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <a href="{% url 'home' %}">Home</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact'%}">Contact</a>
+</nav>
+
+<section class="experience-page">
+
+  <h1>Experience</h1>
+
+  <!-- TOP BOXES -->
+  <div class="experience-container">
+
+    <div class="experience-box">
+      <h2>Education</h2>
+      <p>
+        <strong>BSc Computer Science</strong><br>
+        Aston University<br>
+        2021 - 2025
+      </p>
+    </div>
+
+  </div>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="experience-section">
+
+    <h2 class="section-title">Detailed Experience</h2>
+
+    <!-- TABS -->
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('work')">Professional</button>
+      <button class="tab" onclick="showTab('uni')">University</button>
+    </div>
+
+    <!-- PROFESSIONAL -->
+    <div id="work" class="tab-content active">
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <h3>Warehouse Operative — Brandpath</h3>
+          <span>Aug 2021 – Sep 2023</span>
+        </div>
+        <ul>
+          <li>Processed 2,000+ packages weekly.</li>
+          <li>Improved stock accuracy by 15%.</li>
+          <li>Exceeded productivity targets by 20%.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <h3>Receptionist — Aston Cross Repair Centre</h3>
+          <span>Jun 2019 – Sep 2020</span>
+        </div>
+        <ul>
+          <li>Managed 50+ daily bookings.</li>
+          <li>Reduced waiting time by 10%.</li>
+          <li>Strengthened IT & communication skills.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- UNIVERSITY -->
+    <div id="uni" class="tab-content">
+
+      <div id="uni-page-1" class="page active">
+        <h3>Modules & Learning</h3>
+        <ul class="module-list">
+          <li>Artificial Intelligence</li>
+          <li>Software Engineering</li>
+          <li>Data Structures & Algorithms</li>
+          <li>Computer Animation</li>
+          <li>Human Computer Interaction</li>
+          <li>Information Security</li>
+          <li>Multi-Agent Systems</li>
+          <li>Image & Video Processing</li>
+        </ul>
+      </div>
+
+      <div id="uni-page-2" class="page">
+        <h3>Team Projects</h3>
+        <p>Worked in Agile teams to deliver full-stack applications.</p>
+      </div>
+
+      <div id="uni-page-3" class="page">
+        <h3>Individual Projects</h3>
+        <p>Developed independent projects using Python, PHP, and JavaScript.</p>
+      </div>
+
+      <div class="pagination">
+        <button onclick="showPage(1)">1</button>
+        <button onclick="showPage(2)">2</button>
+        <button onclick="showPage(3)">3</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+
+</section>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('uni-page-' + page).classList.add('active');
+  }
+</script>
+
+<footer>
+  <p>© 2026 Ilias</p>
+</footer>
+</body>
+</html>

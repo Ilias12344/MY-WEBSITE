@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ilias | Portfolio</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <a href="{% url 'home' %}">Home</a> 
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+  <span class="badge">AGILE · INNOVATIVE · ASPIRING · PROGRESSIVE · DEVELOPER</span>
+  <h1>Hi, I’m Ilias</h1>
+  <p class="subtitle">
+    Graduate in Computer Science building real-life Web-Development.
+  </p>
+</section>
+
+<!-- RESUME SECTION -->
+<div class="resume-section">
+  <a href="{% static 'CV - Web Developer.docx' %}" target="_blank" class="resume-box">
+    View My Resume
+  </a>
+</div>
+
+<!-- ABOUT & CONTACT -->
+<section class="experience-page">
+  <div class="experience-container">
+
+    <div class="experience-box">
+      <h2>About Me</h2>
+    <p>I am a Computer Science graduate from Aston University with a strong foundation in software engineering and full-stack development. I have experience building software and web applications using Python, Java, JavaScript, Django, HTML, and CSS, gained through both individual and team-based projects.</p>
+
+    <p> I am skilled in object-oriented programming and have a solid understanding of data structures and algorithms, allowing me to approach problems analytically and develop efficient solutions. My experience includes developing database-driven platforms, debugging applications, and applying user-centred design principles. I am also familiar with Agile development practices and collaborative workflows.</p>
+
+    <p> I am particularly interested in software engineering roles where I can build scalable applications and continue developing my technical expertise.</p>
+
+    <p> Currently, I am seeking a Graduate Software Engineer role where I can contribute to building innovative digital solutions, continue learning, and develop into a well-rounded engineer as part of a forward-thinking team.</p>
+    </div>
+
+    
+</section>
+
+<footer class="footer-box">
+  <p>© 2026 Ilias</p>
+
+  {% load static %}
+
+<div class="socials">
+  <a href="https://github.com/Ilias12344" target="_blank" class="social-link">
+    <img src="{% static 'images/GitHub.JPEG' %}" alt="GitHub" style="width: 70px;">
+  </a>
+
+  <a href="https://discord.com/users/ilias3720" target="_blank" class="social-link">
+    <img src="{% static 'images/Discord.PNG' %}" alt="Discord" style="width: 70px;">
+  </a>
+</div>
+
+  <a href="https://www.linkedin.com/in/ilias-liibaan-ali-34710a308" target="_blank" class="social-link">
+    <img src="{% static 'images/LinkedIn.PNG' %}" alt="LinkedIn" style="width: 70px;">
+  </a>
+</div>
+</footer>
+
+</body>
+</html>

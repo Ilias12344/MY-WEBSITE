@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Ilias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #eaeaf0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: blue;
+      padding: 12px 24px;
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav a {
+      margin: 0 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-container {
+      background: #11172c;
+      padding: 50px;
+      border-radius: 14px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+
+    p {
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    .email-box {
+      display: block;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      color: #eaeaf0;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .email-box:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 35px;
+      text-decoration: none;
+      color: #5f7cff;
+      font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      opacity: 0.5;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="{% url 'home' %}">Home</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+<div class="contact-container">
+  <h1>Contact</h1>
+  <p>If you’d like to get in touch, feel free to email me.</p>
+
+  <a href="mailto:iliasali555@hotmail.com" class="email-box">
+    iliasali555@hotmail.com
+  </a>
+
+  <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+</div>
+
+<footer>
+  © 2026 Ilias
+</footer>
+
+</body>
+</html>
