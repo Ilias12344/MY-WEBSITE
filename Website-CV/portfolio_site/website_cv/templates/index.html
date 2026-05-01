@@ -9,66 +9,90 @@
 </head>
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav class="nav">
   <a href="{% url 'home' %}">Home</a> 
+  <a href="#about">About</a>
   <a href="{% url 'experience' %}">Experience</a>
   <a href="{% url 'contact' %}">Contact</a>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section id="home" class="hero">
-  <span class="badge">AGILE · INNOVATIVE · ASPIRING · PROGRESSIVE · DEVELOPER</span>
-  <h1>Hi, I’m Ilias</h1>
+  <span class="badge">AGILE · INNOVATIVE · ASPIRING · DEVELOPER</span>
+
+  <h1><span class="highlight">Hi, I’m Ilias.</span></h1>
+
   <p class="subtitle">
-    Graduate in Computer Science building real-life Web-Development.
+    Graduate Computer Science(BSc) experienced in building modern, scalable web applications.
   </p>
+
+  <div class="hero-buttons">
+    <a href="{% static 'CV-ILIAS.pdf' %}" class="btn-secondary">Download CV</a>
+  </div>
 </section>
 
-<!-- RESUME SECTION -->
-<div class="resume-section">
-  <a href="{% static 'CV - Web Developer.docx' %}" target="_blank" class="resume-box">
-    View My Resume
-  </a>
-</div>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="about-card">
+    <h2>About Me</h2>
+    <p>A resilient, analytical and motivated Computer Science Graduate from Aston University with experience in Software and Web Development using Python, Django, JavaScript, HTML and CSS. Developed web applications and database driven platforms through academic and team-based projects. Strong understanding of Agile methodology, debugging design. Eager to fulfil a challenging role where I can further develop my technical expertise, add value to the team, and contribute towards innovative digital solutions that support companywide success.</p>
 
-<!-- ABOUT & CONTACT -->
-<section class="experience-page">
-  <div class="experience-container">
-
-    <div class="experience-box">
-      <h2>About Me</h2>
-    <p>I am a Computer Science graduate from Aston University with a strong foundation in software engineering and full-stack development. I have experience building software and web applications using Python, Java, JavaScript, Django, HTML, and CSS, gained through both individual and team-based projects.</p>
-
-    <p> I am skilled in object-oriented programming and have a solid understanding of data structures and algorithms, allowing me to approach problems analytically and develop efficient solutions. My experience includes developing database-driven platforms, debugging applications, and applying user-centred design principles. I am also familiar with Agile development practices and collaborative workflows.</p>
-
-    <p> I am particularly interested in software engineering roles where I can build scalable applications and continue developing my technical expertise.</p>
-
-    <p> Currently, I am seeking a Graduate Software Engineer role where I can contribute to building innovative digital solutions, continue learning, and develop into a well-rounded engineer as part of a forward-thinking team.</p>
+    <div class="skills">
+      <span>Python</span>
+      <span>Django</span>
+      <span>JavaScript</span>
+      <span>HTML/CSS</span>
+      <span>SQL</span>
     </div>
-
-    
+  </div>
 </section>
 
-<footer class="footer-box">
+<section class="Section">
+  <div class="about-card">
+    <h2>Portfolio</h2>
+
+    <p>
+      Here are some of the projects and systems I have worked on, showcasing my skills in full-stack development and problem-solving.
+    </p>
+
+    <div class="portfolio-items">
+
+      <div class="portfolio-item">
+        <h3>Pain Tracking Application</h3>
+        <p>
+          A Django-based system for tracking pain symptoms with dashboard analytics and history tracking.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Technology Website</h3>
+        <p>
+          A full-stack website with authentication, database integration, and structured navigation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
   <p>© 2026 Ilias</p>
 
-  {% load static %}
+  <div class="socials">
+    <a href="https://github.com/Ilias12344" target="_blank">
+      <img src="{% static 'images/GitHub.JPEG' %}">
+    </a>
 
-<div class="socials">
-  <a href="https://github.com/Ilias12344" target="_blank" class="social-link">
-    <img src="{% static 'images/GitHub.JPEG' %}" alt="GitHub" style="width: 70px;">
-  </a>
+    <a href="https://discord.com/users/ilias3720" target="_blank">
+      <img src="{% static 'images/Discord.PNG' %}">
+    </a>
 
-  <a href="https://discord.com/users/ilias3720" target="_blank" class="social-link">
-    <img src="{% static 'images/Discord.PNG' %}" alt="Discord" style="width: 70px;">
-  </a>
-</div>
-
-  <a href="https://www.linkedin.com/in/ilias-liibaan-ali-34710a308" target="_blank" class="social-link">
-    <img src="{% static 'images/LinkedIn.PNG' %}" alt="LinkedIn" style="width: 70px;">
-  </a>
-</div>
+    <a href="https://www.linkedin.com/in/ilias-liibaan-ali-34710a308" target="_blank">
+      <img src="{% static 'images/LinkedIn.PNG' %}">
+    </a>
+  </div>
 </footer>
 
 </body>

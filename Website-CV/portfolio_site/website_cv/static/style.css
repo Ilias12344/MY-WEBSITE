@@ -1,100 +1,287 @@
-/*  BODY */
-body {
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*  NAVIGATION */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  line-height: 1.6;
+}
+
+/* =========================
+   NAVIGATION (GLASS EFFECT)
+========================= */
 .nav {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, #2563eb, #1d4ed8);
-  padding: 12px 24px;
-  border-radius: 30px;
-  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 30px;
+  border-radius: 40px;
+  z-index: 1000;
 }
 
 .nav a {
-  margin: 0 12px;
+  margin: 0 15px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  position: relative;
+}
+
+/* underline hover animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #3b82f6;
   transition: 0.3s;
 }
 
-.nav a:hover {
-  opacity: 0.8;
+.nav a:hover::after {
+  width: 100%;
 }
 
-/*  HERO SECTION */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
-  height: 60vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 15px;
   text-align: center;
   padding: 0 20px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 .badge {
   background: linear-gradient(90deg, #2563eb, #1d4ed8);
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
 h1 {
-  font-size: 3rem;
-  margin: 20px 0;
+  font-size: 3.5rem;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .subtitle {
   max-width: 600px;
   opacity: 0.8;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
-/* RESUME SECTION */
-.resume-section {
+/* HERO BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid #2563eb;
+  color: #3b82f6;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(37,99,235,0.4);
+}
+
+.btn-secondary:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+.Section {
   display: flex;
   justify-content: center;
-  margin-top: -40px;  
-  margin-bottom: 70px;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 20px;
 }
 
-.resume-box {
-  background: linear-gradient(90deg, #2563eb, #1d4ed8);
-  padding: 14px 36px;
-  border-radius: 40px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-/* FOOTER */
-footer {
+.section-title {
   text-align: center;
-  padding: 40px;
-  opacity: 0.9;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
 }
 
-/* SOCIAL */
+/* =========================
+   ABOUT CARD
+========================= */
+.about-card {
+  background: rgba(17, 23, 44, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 16px;
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+}
+
+.about-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   SKILLS TAGS
+========================= */
+.skills {
+  margin-top: 20px;
+}
+
+.skills span {
+  display: inline-block;
+  background: #2563eb;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 6px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #3b82f6;
+  transform: scale(1.08);
+}
+
+/* =========================
+   PORTFOLIO BOX
+========================= */
+.portfolio-items {
+  margin-top: 20px;
+}
+
+.portfolio-item {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.portfolio-item h3 {
+  margin-bottom: 8px;
+}
+
+.portfolio-item p {
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* hover effect */
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  background: rgba(37, 99, 235, 0.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  opacity: 0.85;
+}
+
 .socials {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
+.socials img {
+  width: 35px;
+  transition: 0.3s;
+}
 
-/* HOVER EFFECT */
-.social-link:hover {
-  background: #2563eb;
-  transform: translateY(-3px);
+.socials img:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    height: auto;
+    padding-top: 120px;
+  }
+
+  .nav {
+    padding: 10px 20px;
+  }
+
+  .nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
 }
