@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ilias | Portfolio</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="{% url 'home' %}">Home</a>
+  <a href="{% url 'experience' %}">Experience</a>
+  <a href="{% url 'contact' %}">Contact</a>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h3>Explore</h3>
+
+  <a href="#about">About-Me</a>
+  <a href="#projects">Projects</a>
+  <a href="#Platforms">Platforms</a>
+</div>
+
+<div class="main-content">
+
+<div class="page-divider"></div>
+
+<!-- Home-->
+<section id="home" class="home">
+  <span class="badge">AGILE · INNOVATIVE · ASPIRING · DEVELOPER</span>
+
+  <h1><span class="highlight">Hi, I’m Ilias.</span></h1>
+
+  <p class="subtitle">
+    Graduate Computer Science(BSc) experienced in building modern, scalable web applications.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="{% static 'CV-ILIAS.pdf' %}" class="btn-secondary">Download CV</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="Section">
+  <div class="about-card">
+    <h2>About Me</h2>
+    <p>A resilient, analytical and motivated Computer Science Graduate from Aston University with experience in Software and Web Development using Python, Django, JavaScript, HTML and CSS. Developed web applications and database driven platforms through academic and team-based projects. Strong understanding of Agile methodology, debugging design. Eager to fulfil a challenging role where I can further develop my technical expertise, add value to the team, and contribute towards innovative digital solutions that support companywide success.</p>
+
+    <div class="skills">
+      <span>Python</span>
+      <span>Django</span>
+      <span>JavaScript</span>
+      <span>HTML/CSS</span>
+      <span>SQL</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="Section">
+  <div class="about-card">
+    <h2>Portfolio</h2>
+
+    <p>
+      Here are my projects and systems I have worked on, showcasing my skills in full-stack development and problem-solving.
+    </p>
+
+    <div class="portfolio-items">
+
+      <div class="portfolio-item">
+        <h3>Pain Tracking Application</h3>
+        <p>
+          A Django-based system for tracking pain symptoms with dashboard analytics and history tracking.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Technology Website</h3>
+        <p>
+          A full-stack website with authentication, database integration, and structured navigation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Platforms SECTION -->
+<section id="Platforms" class="Section">
+  <div class="about-card">
+
+    <h2>Platforms</h2>
+
+      <!-- LINKEDIN -->
+      <div class="portfolio-item">
+        <h3>LinkedIn</h3>
+
+        <p>
+          Connect with me professionally and view my
+          experience, education, and achievements.
+        </p>
+
+        <br>
+
+        <a href="https://www.linkedin.com/in/ilias-liibaan-ali-34710a308"
+           target="_blank"
+           class="btn-secondary">
+          Visit LinkedIn
+        </a>
+      </div>
+
+      <!-- GITHUB -->
+      <div class="portfolio-item">
+        <h3>GitHub</h3>
+
+        <p>
+          Explore my repositories, coding projects,
+          and software development work.
+        </p>
+
+        <br>
+
+        <a href="https://github.com/Ilias12344"
+           target="_blank"
+           class="btn-secondary">
+          View GitHub
+        </a>
+      </div>
+
+       <!-- DISCORD -->
+<div class="portfolio-item">
+  <h3>Discord</h3>
+
+  <p>
+    Connect with me for collaborations,
+    networking, discussions, and project communication.
+  </p>
+
+  <br>
+
+  <a href="https://discord.com/users/ilias3720"
+     target="_blank"
+     class="btn-secondary">
+    Join Discord
+  </a>
+</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="page-divider"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <p>© 2026 Ilias</p>
+
+</footer>
+
+</div>
+</body>
+</html>
